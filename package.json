@@ -9,7 +9,7 @@
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
-    "deploy": "node_modules/gh-pages/bin/pages -d dist"
+    "production": "node build/build-production.js"
   },
   "dependencies": {
     "axios": "^0.16.2",
