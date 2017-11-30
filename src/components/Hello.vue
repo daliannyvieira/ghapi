@@ -2,8 +2,8 @@
   <section>
     <ul>
       <li v-for="resposta in respostas">
-        <p><strong>{{resposta.name}}</strong></p>
-        <p>{{resposta.email}}</p>
+        <p><strong>{{resposta.title}}</strong></p>
+        <p>{{resposta.body}}</p>
       </li>
     </ul>
   </section>
@@ -20,7 +20,7 @@ export default {
     }
   },
   created() {
-    axios.get(`http://jsonplaceholder.typicode.com/users`)
+    axios.get(`http://jsonplaceholder.typicode.com/posts`)
     .then(response => {
       this.respostas = response.data
     })
